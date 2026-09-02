@@ -1,0 +1,116 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: websec
+      POSTGRES_USER: websec
+      POSTGRES_PASSWORD: websec
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  zap:
+    image: zaproxy/zap-stable
+    command:
+      - zap.sh
+      - -daemon
+      - -host
+      - 0.0.0.0
+      - -port
+      - "8090"
+      - -config
+      - api.disablekey=true
+      - -config
+      - api.addrs.addr.name=.*
+      - -config
+      - api.addrs.addr.regex=true
+    ports:
+      - "8090:8090"
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8090/JSON/core/view/version/"]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 120s
+
+  backend:
+    build: ./backend
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: websec
+      DB_USER: websec
+      DB_PASSWORD: websec
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_SECRET: troque-este-segredo-em-producao-troque-este-segredo
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+    ports:
+      - "8080:8080"
+
+  worker:
+    build: ./worker
+    depends_on:
+      postgres:
+        condition: service_started
+      redis:
+        condition: service_started
+      zap:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: websec
+      DB_USER: websec
+      DB_PASSWORD: websec
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      ZAP_API_URL: http://zap:8090
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+      REPORTS_DIR: /data/reports
+    volumes:
+      - reports_data:/data/reports
+
+  frontend:
+    build: ./frontend
+    environment:
+      VITE_API_URL: http://localhost:8080/api
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025" # UI web para inspecionar e-mails enviados em Dev
+      - "1025:1025"
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+volumes:
+  postgres_data:
+  reports_data:

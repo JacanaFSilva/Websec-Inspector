@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: websec-inspector
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:websec}
+    username: ${DB_USER:websec}
+    password: ${DB_PASSWORD:websec}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+  mail:
+    host: ${SMTP_HOST:localhost}
+    port: ${SMTP_PORT:1025}
+    username: ${SMTP_USER:}
+    password: ${SMTP_PASSWORD:}
+
+websec:
+  jwt:
+    secret: ${JWT_SECRET:troque-este-segredo-em-producao-troque-este-segredo}
+    expiration-ms: 86400000
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
