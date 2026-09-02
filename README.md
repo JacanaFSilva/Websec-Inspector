@@ -165,6 +165,7 @@ websec-inspector/
 
 - Docker Desktop;
 - Docker Compose.
+- Docker Backend (WSL 2 Recomendado).
 
 ### Subir o ambiente
 
