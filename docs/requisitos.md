@@ -1,9 +1,9 @@
 # WebSec Inspector — Documento de Requisitos
 
 **Fábrica de Software 2026.2 — UTFPR — Grupo 3**  
-**Atualizado em:** 02/09/2026
+**Atualizado em:** 05/09/2026
 
-Este documento separa os requisitos do produto do estado atual de implementação.
+Este documento registra os requisitos do produto e separa requisito de estado atual de implementação.
 
 ---
 
@@ -85,7 +85,7 @@ O resultado é composto por achados de segurança, classificação de risco, rec
 | RNF04 | Disponibilizar observabilidade com métricas e dashboards. | 🟡 | Containers preparados; integração efetiva ainda pendente. |
 | RNF05 | Disponibilizar CI/CD. | ⬜ | Não há pipeline funcional no estado atual. |
 | RNF06 | Documentar API com OpenAPI/Swagger. | ✅ | Springdoc configurado. |
-| RNF07 | Interface responsiva em React + TailwindCSS. | 🟡 | Interface atual implementada; evolução visual e cobertura funcional continuam no backlog. |
+| RNF07 | Interface responsiva em React + TailwindCSS. | 🟡 | Interface atual implementada; evolução visual e cobertura funcional continuam no backlog do Project. |
 | RNF08 | Nunca executar scan sem verificação de propriedade. | ✅ | A transição para `QUEUED` exige verificação. |
 | RNF09 | Isolar recursos por usuário. | 🚧 | Deve ser consolidado em todos os endpoints que recebem IDs de recursos. |
 | RNF10 | Versionar o schema do banco. | ⬜ | Atualmente utiliza `ddl-auto: update`. |
@@ -198,7 +198,7 @@ O PDF atual representa uma primeira versão funcional e ainda não atende a todo
 
 ## 9. Critérios de aceitação gerais
 
-1. Toda funcionalidade deve possuir uma história ou item rastreável no backlog/Jira.
+1. Toda funcionalidade deve possuir uma história ou item rastreável no GitHub Projects.
 2. Endpoints devem estar documentados no Swagger.
 3. Um scan não pode entrar em `QUEUED` sem verificação de propriedade.
 4. Erros devem produzir resposta HTTP coerente e mensagem compreensível.
@@ -220,11 +220,13 @@ Uma história somente deve ser considerada concluída quando:
 - teste correspondente quando aplicável;
 - documentação atualizada;
 - critério de aceitação demonstrável;
-- status atualizado no backlog/Jira.
+- status atualizado no GitHub Projects.
 
 ---
 
 ## 11. Priorização atual
+
+A priorização operacional e o estado de execução devem ser acompanhados no GitHub Projects. Abaixo permanece somente a ordem técnica de referência:
 
 ### P0 — Integridade e segurança
 
@@ -238,13 +240,14 @@ Uma história somente deve ser considerada concluída quando:
 - CVSS real;
 - classificação OWASP;
 - checks customizados;
-- evidências do ZAP.
+- evidências do ZAP;
+- relatório completo.
 
 ### P2 — Produto
 
-- relatório completo;
 - histórico;
 - comparação;
+- e-mail real;
 - frontend do resultado.
 
 ### P3 — Operação
@@ -262,3 +265,11 @@ Uma história somente deve ser considerada concluída quando:
 - painel administrativo;
 - indicadores;
 - funcionalidades específicas de `ADMIN`.
+
+---
+
+## 12. Fonte operacional
+
+O GitHub Projects é a fonte operacional do backlog: itens de trabalho, prioridades, responsáveis, andamento e ciclo atual devem ser registrados no projeto.
+
+Este documento permanece como referência dos requisitos e da relação entre requisitos e implementação; não deve ser usado como substituto do board operacional.
