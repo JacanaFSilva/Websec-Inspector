@@ -162,7 +162,3 @@ A documentação detalhada foi separada do README para evitar duplicação e man
 - [`docs/arquitetura.md`](docs/arquitetura.md) — arquitetura, fluxo e decisões técnicas.
 
 O backlog operacional, prioridades, responsáveis e andamento devem ser acompanhados no [GitHub Projects](https://github.com/users/JacanaFSilva/projects/2).
-
-## Observação sobre desenvolvimento
-
-O README descreve somente o produto, as tecnologias e a execução do ambiente. Detalhes de implementação, decisões arquiteturais, requisitos e trabalho futuro devem permanecer nos documentos técnicos e no GitHub Projects.
