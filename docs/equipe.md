@@ -1,8 +1,8 @@
 # WebSec Inspector — Equipe
 
-**Atualizado em:** 02/09/2026
+**Atualizado em:** 05/09/2026
 
-A equipe é organizada por responsabilidades, mantendo possibilidade de colaboração entre frentes conforme a necessidade do backlog.
+A equipe é organizada por responsabilidades, mantendo colaboração entre frentes conforme a necessidade do projeto.
 
 | Integrante | Papel principal | Responsabilidades |
 |---|---|---|
@@ -18,109 +18,48 @@ A equipe é organizada por responsabilidades, mantendo possibilidade de colabora
 
 ---
 
-## 1. Organização por frentes
+## Organização por frentes
 
 ### Produto / PM / PO
 
-Responsável por:
-
-- visão do produto;
-- priorização;
-- backlog;
-- critérios de aceitação;
-- acompanhamento do ciclo;
-- alinhamento entre requisitos e implementação.
+Responsável por visão do produto, priorização, backlog, critérios de aceitação, acompanhamento do ciclo e alinhamento entre requisitos e implementação.
 
 ### Arquitetura / Tech Lead
 
-Responsável por:
-
-- decisões arquiteturais;
-- padrões técnicos;
-- integração backend/worker/frontend;
-- revisão de decisões com impacto sistêmico.
+Responsável por decisões arquiteturais, padrões técnicos, integração backend/worker/frontend e revisão de decisões com impacto sistêmico.
 
 ### Back-end
 
-Responsável por:
-
-- API REST;
-- autenticação;
-- regras de negócio;
-- persistência;
-- fila;
-- segurança de acesso aos recursos.
+Responsável por API REST, autenticação, regras de negócio, persistência, fila e segurança de acesso aos recursos.
 
 ### Front-end
 
-Responsável por:
-
-- telas;
-- fluxos de autenticação;
-- submissão;
-- verificação;
-- resultados;
-- histórico e experiência de uso.
+Responsável por telas, autenticação, submissão, verificação, resultados, histórico e experiência de uso.
 
 ### Segurança / Dados / IA
 
-Responsável por:
-
-- definição dos checks;
-- interpretação dos achados;
-- classificação;
-- OWASP;
-- CVSS;
-- qualidade das evidências.
+Responsável por definição dos checks, interpretação dos achados, classificação, OWASP, CVSS e qualidade das evidências.
 
 ### QA
 
-Responsável por:
-
-- critérios de qualidade;
-- testes;
-- regressão;
-- validação dos critérios de aceitação;
-- evidências de funcionamento.
+Responsável por critérios de qualidade, testes, regressão, validação dos critérios de aceitação e evidências de funcionamento.
 
 ### Infra / DevOps
 
-Responsável por:
-
-- Docker;
-- Redis;
-- banco;
-- worker;
-- ZAP;
-- observabilidade;
-- CI/CD.
+Responsável por Docker, Redis, banco, worker, ZAP, observabilidade e CI/CD.
 
 ---
 
-## 2. Regra de responsabilidade
+## Responsabilidade por tarefa
 
-A existência de um papel na tabela não significa que todas as atividades daquela frente sejam executadas exclusivamente pela pessoa indicada.
+A distribuição de atividades deve ser registrada no GitHub Projects, considerando responsável, colaboradores, prioridade, ciclo e critérios de aceitação.
 
-A distribuição de cada tarefa deve ser registrada no Jira, considerando:
-
-- responsável;
-- colaborador(es);
-- prioridade;
-- sprint/ciclo;
-- critérios de aceitação.
+A existência de um papel na tabela não significa que as atividades daquela frente sejam executadas exclusivamente pela pessoa indicada.
 
 ---
 
-## 3. Regra de documentação
+## Regra de documentação
 
-Cada frente deve atualizar a documentação quando uma alteração modificar:
-
-- comportamento do sistema;
-- arquitetura;
-- requisito;
-- estado de uma história;
-- modelo de dados;
-- integração externa;
-- procedimento de execução.
+Cada frente deve atualizar a documentação quando uma alteração modificar comportamento do sistema, arquitetura, requisito, estado de uma história, modelo de dados, integração externa ou procedimento de execução.
 
 A documentação não deve declarar como concluído aquilo que existe apenas como planejamento ou scaffold.
