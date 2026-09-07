@@ -1,6 +1,5 @@
 # WebSec Inspector — Documento de Requisitos
 
-**Fábrica de Software 2026.2 — UTFPR — Grupo 3**  
 **Atualizado em:** 09/09/2026
 
 Este documento registra os requisitos do produto e separa requisito de estado atual de implementação.
