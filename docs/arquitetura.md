@@ -1,6 +1,6 @@
 # WebSec Inspector — Arquitetura
 
-**Atualizado em:** 02/09/2026
+**Atualizado em:** 09/09/2026
 
 Este documento descreve a arquitetura **existente no código atual**. Funcionalidades previstas, mas ainda não implementadas, são indicadas explicitamente.
 
