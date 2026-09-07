@@ -11,7 +11,7 @@ A equipe é organizada por responsabilidades, mantendo colaboração entre frent
 | Hellen | QA | estratégia de testes, qualidade, validação e automação |
 | Juan | UX/UI | experiência do usuário, fluxos e interface |
 | Murilo | Dados/IA + produto | dados, apoio à definição de produto e classificação |
-| Jonathan Luiz | Dados/IA + Infra/DevOps | dados, inteligência e apoio às análises |
+| Jonathan Luiz | Dados/IA + Infra | dados, inteligência e apoio às análises |
 | Vitor | Front-end | implementação e integração da interface web |
 | Gustavo | Back-end | API, regras de negócio e persistência |
 | Romildo | Front-end + apoio QA | frontend, integração e apoio às atividades de qualidade |
