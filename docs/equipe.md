@@ -1,6 +1,6 @@
 # WebSec Inspector — Equipe
 
-**Atualizado em:** 05/09/2026
+**Atualizado em:** 09/09/2026
 
 A equipe é organizada por responsabilidades, mantendo colaboração entre frentes conforme a necessidade do projeto.
 
