@@ -160,4 +160,4 @@ A aplicação frontend conversa com a API. A API grava os dados no PostgreSQL e 
 - [`docs/equipe.md`](docs/equipe.md) — designação técnica, organização das responsabilidades.
 - [`docs/requisitos.md`](docs/requisitos.md) — requisitos funcionais, não funcionais e de segurança.
 
-O backlog operacional, prioridades, responsáveis e andamento devem ser acompanhados no [GitHub Projects](https://github.com/users/JacanaFSilva/projects/2).
+O backlog operacional, prioridades, responsáveis e andamento devem ser acompanhados no [GitHub Projects](https://github.com/orgs/WebSec-Inspector/projects/1).
