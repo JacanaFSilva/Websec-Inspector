@@ -46,7 +46,7 @@ Responsável por critérios de qualidade, testes, regressão, validação dos cr
 
 ### Infra / DevOps
 
-Responsável por Docker, Redis, banco, worker, ZAP, observabilidade e CI/CD.
+Responsável por Docker, Redis, banco, worker, ZAP, observabilidade, integração contínua e implantação contínua (CI/CD).
 
 ---
 
