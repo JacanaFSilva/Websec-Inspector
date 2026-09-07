@@ -267,9 +267,3 @@ A priorização operacional e o estado de execução devem ser acompanhados no G
 - funcionalidades específicas de `ADMIN`.
 
 ---
-
-## 12. Fonte operacional
-
-O GitHub Projects é a fonte operacional do backlog: itens de trabalho, prioridades, responsáveis, andamento e ciclo atual devem ser registrados no projeto.
-
-Este documento permanece como referência dos requisitos e da relação entre requisitos e implementação; não deve ser usado como substituto do board operacional.
