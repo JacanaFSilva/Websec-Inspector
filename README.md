@@ -1,6 +1,6 @@
 # WebSec Inspector
 
-**Fábrica de Software 2026.2 — UTFPR — Time 5*
+**Fábrica de Software 2026.2 — UTFPR — Time 5**
 
 Plataforma web para avaliação automatizada de segurança de aplicações acessíveis por HTTP/HTTPS. O alvo precisa passar por uma verificação de controle do domínio antes que a análise seja colocada em fila. As varreduras são executadas de forma assíncrona por um worker isolado, utilizando OWASP ZAP.
 
