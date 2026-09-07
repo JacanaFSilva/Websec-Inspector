@@ -55,11 +55,3 @@ Responsável por Docker, Redis, banco, worker, ZAP, observabilidade, integraçã
 A distribuição de atividades deve ser registrada no GitHub Projects, considerando responsável, colaboradores, prioridade, ciclo e critérios de aceitação.
 
 A existência de um papel na tabela não significa que as atividades daquela frente sejam executadas exclusivamente pela pessoa indicada.
-
----
-
-## Regra de documentação
-
-Cada frente deve atualizar a documentação quando uma alteração modificar comportamento do sistema, arquitetura, requisito, estado de uma história, modelo de dados, integração externa ou procedimento de execução.
-
-A documentação não deve declarar como concluído aquilo que existe apenas como planejamento
